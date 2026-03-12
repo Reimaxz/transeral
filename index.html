@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <title>Transeral - Sistema de Gestión</title>
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Librería para gráficas -->
+<!-- Iconos profesionales -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Librería de gráficas -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script src="script.js"></script>
@@ -16,39 +20,120 @@
 <body>
 
 <header>
+
 <h1>TRANSERAL</h1>
+
+<div class="topbar">
+
+<span class="usuario">
+<i class="fa-solid fa-user"></i> Admin
+</span>
+
+<button onclick="toggleDarkMode()">
+<i class="fa-solid fa-moon"></i> Modo oscuro
+</button>
+
+<button onclick="logout()">
+<i class="fa-solid fa-right-from-bracket"></i> Salir
+</button>
+
+</div>
+
 </header>
 
+
 <nav>
-<button onclick="mostrar('dashboard')">Dashboard</button>
-<button onclick="mostrar('viajes')">Viajes</button>
-<button onclick="mostrar('choferes')">Choferes</button>
-<button onclick="mostrar('vehiculos')">Vehículos</button>
-<button onclick="mostrar('lugares')">Lugares</button>
-<button onclick="mostrar('materiales')">Materiales</button>
-<button onclick="mostrar('mantenimiento')">Mantenimiento</button>
-<button onclick="mostrar('accidentes')">Accidentes</button>
-<button onclick="mostrar('inventario')">Inventario</button>
-<button onclick="mostrar('reportes')">Reportes</button>
-<button onclick="mostrar('docpersonal')">Doc. Personal</button>
-<button onclick="mostrar('notificaciones')">Notificaciones</button>
-<button onclick="mostrar('usuario')">Usuario</button>
+
+<button onclick="mostrar('dashboard')">
+<i class="fa-solid fa-chart-line"></i> Dashboard
+</button>
+
+<button onclick="mostrar('viajes')">
+<i class="fa-solid fa-route"></i> Viajes
+</button>
+
+<button onclick="mostrar('choferes')">
+<i class="fa-solid fa-user-tie"></i> Choferes
+</button>
+
+<button onclick="mostrar('vehiculos')">
+<i class="fa-solid fa-truck"></i> Vehículos
+</button>
+
+<button onclick="mostrar('lugares')">
+<i class="fa-solid fa-map-location-dot"></i> Lugares
+</button>
+
+<button onclick="mostrar('materiales')">
+<i class="fa-solid fa-box"></i> Materiales
+</button>
+
+<button onclick="mostrar('mantenimiento')">
+<i class="fa-solid fa-wrench"></i> Mantenimiento
+</button>
+
+<button onclick="mostrar('accidentes')">
+<i class="fa-solid fa-triangle-exclamation"></i> Accidentes
+</button>
+
+<button onclick="mostrar('inventario')">
+<i class="fa-solid fa-warehouse"></i> Inventario
+</button>
+
+<button onclick="mostrar('reportes')">
+<i class="fa-solid fa-file-lines"></i> Reportes
+</button>
+
+<button onclick="mostrar('docpersonal')">
+<i class="fa-solid fa-id-card"></i> Doc. Personal
+</button>
+
+<button onclick="mostrar('notificaciones')">
+<i class="fa-solid fa-bell"></i> Notificaciones
+</button>
+
+<button onclick="mostrar('usuario')">
+<i class="fa-solid fa-users"></i> Usuarios
+</button>
+
 </nav>
+
 
 <main>
 
 <section id="dashboard" class="pagina">
+
 <h2>Dashboard</h2>
 
 <div class="grid">
 
-<div class="card" onclick="mostrar('viajes')">Viajes</div>
-<div class="card" onclick="mostrar('choferes')">Choferes</div>
-<div class="card" onclick="mostrar('vehiculos')">Vehículos</div>
-<div class="card" onclick="mostrar('lugares')">Lugares</div>
-<div class="card" onclick="mostrar('materiales')">Materiales</div>
-<div class="card" onclick="mostrar('accidentes')">Accidentes</div>
-<div class="card" onclick="mostrar('mantenimiento')">Reparaciones</div>
+<div class="card" onclick="mostrar('viajes')">
+<i class="fa-solid fa-route"></i><br>Viajes
+</div>
+
+<div class="card" onclick="mostrar('choferes')">
+<i class="fa-solid fa-user-tie"></i><br>Choferes
+</div>
+
+<div class="card" onclick="mostrar('vehiculos')">
+<i class="fa-solid fa-truck"></i><br>Vehículos
+</div>
+
+<div class="card" onclick="mostrar('lugares')">
+<i class="fa-solid fa-map-location-dot"></i><br>Lugares
+</div>
+
+<div class="card" onclick="mostrar('materiales')">
+<i class="fa-solid fa-box"></i><br>Materiales
+</div>
+
+<div class="card" onclick="mostrar('accidentes')">
+<i class="fa-solid fa-triangle-exclamation"></i><br>Accidentes
+</div>
+
+<div class="card" onclick="mostrar('mantenimiento')">
+<i class="fa-solid fa-wrench"></i><br>Reparaciones
+</div>
 
 </div>
 
@@ -58,10 +143,13 @@
 
 </section>
 
+
 <section id="viajes" class="pagina">
+
 <h2>Viajes</h2>
 
 <table>
+
 <tr>
 <th>Vehículo</th>
 <th>Chofer</th>
@@ -78,15 +166,22 @@
 
 </section>
 
+
 <section id="choferes" class="pagina">
+
 <h2>Choferes</h2>
+
 <p>Aquí se mostrarán los documentos del personal.</p>
+
 </section>
 
+
 <section id="vehiculos" class="pagina">
+
 <h2>Vehículos</h2>
 
 <table>
+
 <tr>
 <th>Vehículo</th>
 <th>Conductor</th>
@@ -103,7 +198,9 @@
 
 </section>
 
+
 <section id="lugares" class="pagina">
+
 <h2>Lugares</h2>
 
 <div id="mapa">
@@ -112,7 +209,9 @@ Mapa de Google Maps aquí
 
 </section>
 
+
 <section id="materiales" class="pagina">
+
 <h2>Materiales</h2>
 
 <ul>
@@ -123,10 +222,13 @@ Mapa de Google Maps aquí
 
 </section>
 
+
 <section id="mantenimiento" class="pagina">
+
 <h2>Mantenimiento</h2>
 
 <table>
+
 <tr>
 <th>Vehículo</th>
 <th>Problema</th>
@@ -141,7 +243,9 @@ Mapa de Google Maps aquí
 
 </section>
 
+
 <section id="accidentes" class="pagina">
+
 <h2>Accidentes</h2>
 
 <p>Accidentes registrados.</p>
@@ -152,7 +256,9 @@ Ubicación del accidente
 
 </section>
 
+
 <section id="inventario" class="pagina">
+
 <h2>Inventario</h2>
 
 <input type="text" placeholder="Nuevo material">
@@ -160,14 +266,18 @@ Ubicación del accidente
 
 </section>
 
+
 <section id="reportes" class="pagina">
+
 <h2>Reportes</h2>
 
 <button>Generar Reporte</button>
 
 </section>
 
+
 <section id="docpersonal" class="pagina">
+
 <h2>Agregar Personal</h2>
 
 <form>
@@ -185,7 +295,9 @@ Ubicación del accidente
 
 </section>
 
+
 <section id="notificaciones" class="pagina">
+
 <h2>Notificaciones</h2>
 
 <textarea placeholder="Mensaje"></textarea>
@@ -196,17 +308,21 @@ Ubicación del accidente
 
 </section>
 
+
 <section id="usuario" class="pagina">
+
 <h2>Usuarios</h2>
 
 <p>Administrador / Usuarios limitados.</p>
 
 </section>
 
+
 </main>
 
-<!-- Script del dashboard -->
 <script src="dashboard.js"></script>
+<script src="inventario.js"></script>
+<script src="reportes.js"></script>
 
 </body>
 </html>
