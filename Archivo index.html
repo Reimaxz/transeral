@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Transeral - Sistema de Gestión</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+
+<header>
+<h1>TRAN S ERAL</h1>
+</header>
+
+<nav>
+<button onclick="mostrar('dashboard')">Dashboard</button>
+<button onclick="mostrar('viajes')">Viajes</button>
+<button onclick="mostrar('choferes')">Choferes</button>
+<button onclick="mostrar('vehiculos')">Vehículos</button>
+<button onclick="mostrar('lugares')">Lugares</button>
+<button onclick="mostrar('materiales')">Materiales</button>
+<button onclick="mostrar('mantenimiento')">Mantenimiento</button>
+<button onclick="mostrar('accidentes')">Accidentes</button>
+<button onclick="mostrar('inventario')">Inventario</button>
+<button onclick="mostrar('reportes')">Reportes</button>
+<button onclick="mostrar('docpersonal')">Doc. Personal</button>
+<button onclick="mostrar('notificaciones')">Notificaciones</button>
+<button onclick="mostrar('usuario')">Usuario</button>
+</nav>
+
+<main>
+
+<section id="dashboard" class="pagina">
+<h2>Dashboard</h2>
+
+<div class="grid">
+
+<div class="card" onclick="mostrar('viajes')">Viajes</div>
+<div class="card" onclick="mostrar('choferes')">Choferes</div>
+<div class="card" onclick="mostrar('vehiculos')">Vehículos</div>
+<div class="card" onclick="mostrar('lugares')">Lugares</div>
+<div class="card" onclick="mostrar('materiales')">Materiales</div>
+<div class="card" onclick="mostrar('accidentes')">Accidentes</div>
+<div class="card" onclick="mostrar('mantenimiento')">Reparaciones</div>
+
+</div>
+</section>
+
+<section id="viajes" class="pagina">
+<h2>Viajes</h2>
+<table>
+<tr>
+<th>Vehículo</th>
+<th>Chofer</th>
+<th>Destino</th>
+</tr>
+
+<tr>
+<td>Camión 12</td>
+<td>Juan Pérez</td>
+<td>Santo Domingo</td>
+</tr>
+
+</table>
+</section>
+
+<section id="choferes" class="pagina">
+<h2>Choferes</h2>
+<p>Aquí se mostrarán los documentos del personal.</p>
+</section>
+
+<section id="vehiculos" class="pagina">
+<h2>Vehículos</h2>
+<table>
+<tr>
+<th>Vehículo</th>
+<th>Conductor</th>
+<th>Fallas</th>
+</tr>
+
+<tr>
+<td>Camión 5</td>
+<td>Pedro López</td>
+<td>Freno desgastado</td>
+</tr>
+
+</table>
+</section>
+
+<section id="lugares" class="pagina">
+<h2>Lugares</h2>
+
+<div id="mapa">
+Mapa de Google Maps aquí
+</div>
+
+</section>
+
+<section id="materiales" class="pagina">
+<h2>Materiales</h2>
+
+<ul>
+<li>Cemento</li>
+<li>Hierro</li>
+<li>Arena</li>
+</ul>
+
+</section>
+
+<section id="mantenimiento" class="pagina">
+<h2>Mantenimiento</h2>
+
+<table>
+<tr>
+<th>Vehículo</th>
+<th>Problema</th>
+</tr>
+
+<tr>
+<td>Camión 3</td>
+<td>Motor dañado</td>
+</tr>
+
+</table>
+
+</section>
+
+<section id="accidentes" class="pagina">
+<h2>Accidentes</h2>
+
+<p>Accidentes registrados.</p>
+
+<div id="mapa2">
+Ubicación del accidente
+</div>
+
+</section>
+
+<section id="inventario" class="pagina">
+<h2>Inventario</h2>
+
+<input type="text" placeholder="Nuevo material">
+<button>Agregar</button>
+
+</section>
+
+<section id="reportes" class="pagina">
+<h2>Reportes</h2>
+
+<button>Generar Reporte</button>
+
+</section>
+
+<section id="docpersonal" class="pagina">
+<h2>Agregar Personal</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+<input type="text" placeholder="Apellido">
+<input type="date">
+<input type="text" placeholder="Cédula">
+<input type="text" placeholder="Teléfono">
+<input type="file">
+
+<button>Guardar</button>
+
+</form>
+
+</section>
+
+<section id="notificaciones" class="pagina">
+<h2>Notificaciones</h2>
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button>Enviar Gmail</button>
+<button>Enviar WhatsApp</button>
+<button>Enviar SMS</button>
+
+</section>
+
+<section id="usuario" class="pagina">
+<h2>Usuarios</h2>
+
+<p>Administrador / Usuarios limitados.</p>
+
+</section>
+
+</main>
+
+</body>
+</html>
