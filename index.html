@@ -3,8 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <title>Transeral - Sistema de Gestión</title>
+
 <link rel="stylesheet" href="style.css">
+
+<!-- Librería para gráficas -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <script src="script.js"></script>
+
 </head>
 
 <body>
@@ -45,10 +51,16 @@
 <div class="card" onclick="mostrar('mantenimiento')">Reparaciones</div>
 
 </div>
+
+<h3>Estadísticas de viajes</h3>
+
+<canvas id="graficaViajes"></canvas>
+
 </section>
 
 <section id="viajes" class="pagina">
 <h2>Viajes</h2>
+
 <table>
 <tr>
 <th>Vehículo</th>
@@ -63,6 +75,7 @@
 </tr>
 
 </table>
+
 </section>
 
 <section id="choferes" class="pagina">
@@ -72,6 +85,7 @@
 
 <section id="vehiculos" class="pagina">
 <h2>Vehículos</h2>
+
 <table>
 <tr>
 <th>Vehículo</th>
@@ -86,6 +100,7 @@
 </tr>
 
 </table>
+
 </section>
 
 <section id="lugares" class="pagina">
@@ -189,6 +204,9 @@ Ubicación del accidente
 </section>
 
 </main>
+
+<!-- Script del dashboard -->
+<script src="dashboard.js"></script>
 
 </body>
 </html>
